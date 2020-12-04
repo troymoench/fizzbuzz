@@ -6,7 +6,7 @@ def fizzbuzz(i: int) -> str:
         output += "fizz"
     if i % 5 == 0:
         output += "buzz"
-    else:
+    if not output:
         output = str(i)
 
     return output
