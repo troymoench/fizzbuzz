@@ -5,7 +5,7 @@ from fizzbuzz import fizzbuzz
 
 
 def numbers_divisible_by_3_but_not_5():
-    return st.integers(min_value=0).filter(lambda x: x % 3 == 0)
+    return st.integers(min_value=0).filter(lambda x: x % 3 == 0 and x % 5 != 0)
 
 
 def numbers_divisible_by_5_but_not_3():
