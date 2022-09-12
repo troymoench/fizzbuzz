@@ -45,3 +45,8 @@ def test_number_divisible_by_3_and_5_returns_fizzbuzz(num: int):
 @given(num=numbers_not_divisible_by_3_or_5())
 def test_number_not_divisible_by_3_or_5_returns_number(num: int):
     assert fizzbuzz(num) == str(num)
+
+
+@given(st.integers(min_value=1, max_value=100))
+def test_return_is_not_empty(num: int):
+    assert len(fizzbuzz(num)) > 0
